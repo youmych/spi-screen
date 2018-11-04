@@ -1,0 +1,13 @@
+[Unit]
+Description=MAX7219-based clock
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/root/yarix/spitest/max7219
+;StandardError=null
+Restart=always
+RestartSec=0
+
+[Install]
+WantedBy=multi-user.target
