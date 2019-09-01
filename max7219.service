@@ -4,7 +4,9 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/root/yarix/spitest/max7219
+ExecStart=/usr/local/max7219 
+;For RPi3:
+;ExecStart=/usr/local/max7219 -D /dev/spidev0.0 -b 8
 ;StandardError=null
 Restart=always
 RestartSec=0
